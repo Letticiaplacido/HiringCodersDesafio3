@@ -1,0 +1,12 @@
+.buttonText {
+    background-color: #59ff00;
+    color: #3C3C3C;
+    font-size: 1.15rem;
+    width: 100%;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    border-radius: 5px;
+}
+
+

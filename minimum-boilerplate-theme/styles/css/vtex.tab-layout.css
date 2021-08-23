@@ -1,0 +1,28 @@
+.container {
+  background: #212121;
+}
+
+.contentItem {
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+.listItemContainer {
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+.listItem {
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.listItemActive {
+  border-bottom: 3px solid #59ff00;
+  color: #59ff00;
+  background: transparent;
+}
+
+.container .contentItem .listItem {
+  color: #ffffff;
+}

@@ -1,0 +1,19 @@
+.caretIcon {
+  color: #ffffff;
+}
+
+.sliderArrows {
+    position: absolute;
+    bottom: -5px;
+    margin: 0 auto;
+}
+
+@media (min-width: 912px) {
+    .sliderArrows {
+        width: 952px;
+    }
+}
+
+.paginationDot {
+    background-color: #59ff00;
+}

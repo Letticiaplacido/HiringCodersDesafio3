@@ -1,0 +1,18 @@
+.imageElement {
+  width: 912px !important;
+  border-radius: 25px;
+}
+
+.searchBarContainer {
+  width: 100%;
+  border: 0 !important;
+}
+
+.main-header {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.searchBarContainer {
+  border-style: none !important;
+}

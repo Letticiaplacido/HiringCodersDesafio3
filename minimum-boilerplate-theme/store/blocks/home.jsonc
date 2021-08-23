@@ -1,0 +1,304 @@
+{
+  "store.home": {
+    "blocks": [
+      "tab-layout#home",
+      "list-context.media-list#banner",
+      "slider-layout#home",
+      "search-result-layout.customQuery#home"
+    ]
+  },
+  // Criação dos itens do Menu, utilizando o tab list
+  "tab-layout#home": {
+    "children": [
+      "tab-list#item",
+      "tab-content#item"
+    ],
+    "props": {
+      "blockClass": "item",
+      "defaultActiveTabId": "item1"
+    }
+  },
+  "tab-list#item": {
+    "children": [
+      "tab-list.item#1",
+      "tab-list.item#2",
+      "tab-list.item#3",
+      "tab-list.item#4",
+      "tab-list.item#5",
+      "tab-list.item#6",
+      "tab-list.item#7",
+      "tab-list.item#8",
+      "tab-list.item#9"
+    ]
+  },
+  "tab-list.item#1": {
+    "props": {
+      "tabId": "corinthians",
+      "label": "corinthians",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#2": {
+    "props": {
+      "tabId": "palmeiras",
+      "label": "palmeiras"
+    }
+  },
+  "tab-list.item#3": {
+    "props": {
+      "tabId": "signos",
+      "label": "signos"
+    }
+  },
+  "tab-list.item#4": {
+    "props": {
+      "tabId": "divertidos",
+      "label": "divertidos"
+    }
+  },
+  "tab-list.item#5": {
+    "props": {
+      "tabId": "7maravilhas",
+      "label": "7maravilhas"
+    }
+  },
+  "tab-list.item#6": {
+    "props": {
+      "tabId": "guerreiros",
+      "label": "guerreiros"
+    }
+  },
+  "tab-list.item#7": {
+    "props": {
+      "tabId": "álbum1",
+      "label": "álbum1"
+    }
+  },
+  "tab-list.item#8": {
+    "props": {
+      "tabId": "álbum2",
+      "label": "álbum2"
+    }
+  },
+  "tab-list.item#9": {
+    "props": {
+      "tabId": "álbum3",
+      "label": "álbum3"
+    }
+  },
+  "tab-content#item": {
+    "children": [
+      "tab-content.item#1",
+      "tab-content.item#2",
+      "tab-content.item#3",
+      "tab-content.item#4",
+      "tab-content.item#5",
+      "tab-content.item#6",
+      "tab-content.item#7",
+      "tab-content.item#8",
+      "tab-content.item#9"
+    ]
+  },
+  "tab-content.item#1": {
+    "children": [],
+    "props": {
+      "tabId": "item1"
+    }
+  },
+  "tab-content.item#2": {
+    "children": [],
+    "props": {
+      "tabId": "item2"
+    }
+  },
+  "tab-content.item#3": {
+    "children": [],
+    "props": {
+      "tabId": "item3"
+    }
+  },
+  "tab-content.item#4": {
+    "children": [],
+    "props": {
+      "tabId": "item4"
+    }
+  },
+  "tab-content.item#5": {
+    "children": [],
+    "props": {
+      "tabId": "item5"
+    }
+  },
+  "tab-content.item#6": {
+    "children": [],
+    "props": {
+      "tabId": "item6"
+    }
+  },
+  "tab-content.item#7": {
+    "children": [],
+    "props": {
+      "tabId": "item7"
+    }
+  },
+  "tab-content.item#8": {
+    "children": [],
+    "props": {
+      "tabId": "item8"
+    }
+  },
+  "tab-content.item#9": {
+    "children": [],
+    "props": {
+      "tabId": "item9"
+    }
+  },
+  // Criação dos produtos em destaque com o slyder layout
+  "list-context.media-list#banner": {
+    "children": [
+      "slider-layout#home"
+    ],
+    "props": {
+      "height": 300,
+      "width": 250,
+      "mediaList": [
+        {
+          "src": "assets/BANNER-WOOD.png",
+          "description": "up medal"
+        },
+        {
+          "src": "assets/guerreiros.png",
+          "description": "up medal"
+        }
+      ]
+    }
+  },
+  "slider-layout#home": {
+    "props": {
+      "fullWidth": false,
+      "showNavigationArrows": "always",
+      "arrowSize": 12,
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true
+    }
+  },
+  // Criação da busca de produtos 
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#lp",
+      "search-result-layout.mobile"
+    ]
+  },
+  "search-result-layout.desktop#lp": {
+    "children": [
+      "search-content#lp"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },
+  "search-content#lp": {
+    "blocks": [
+      "gallery#lp",
+      "not-found"
+    ]
+  },
+  // Criação do bloco lista de produtos
+  "gallery#lp": {
+    "props": {
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width: 1300px)": 2,
+            "desktop": 2,
+            "tablet": 2,
+            "phone": 1
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "ListSummary": "product-summary.shelf#lp",
+      "GridSummary": "product-summary.shelf#lp"
+    }
+  },
+  "product-summary.shelf#lp": {
+    "children": [
+      "modal-trigger#lp",
+      "product-summary-name",
+      "product-images#lp",
+      "vtex.product-highlights@2.x:product-highlights",
+      "product-summary-price",
+      "add-to-cart-button#lp"
+    ],
+    "props": {
+      "blockClass": [
+        "produtos, imagens"
+      ]
+    }
+  },
+  "product-images#lp": {
+    "props": {
+      "showNavigationArrows": "true",
+      "showPaginationDots": true
+    }
+  },
+  "vtex.product-highlights@2.x:product-highlights": {
+    "children": [
+      "product-highlight-text"
+    ]
+  },
+  "product-highlight-text": {
+    "props": {
+      "message": "VALIDAÇÃO A PARTIR DE 09/10/2021"
+    }
+  },
+  "add-to-cart-button#lp": {
+    "props": {
+      "onClickBehavior": "go-to-product-page",
+      "text": "Ver Detalhes"
+    }
+  },
+  "modal-trigger#lp": {
+    "children": [
+      "rich-text#lp",
+      "modal-layout#lp"
+    ]
+  },
+  "rich-text#lp": {
+    "props": {
+      "text": "Click me"
+    }
+  },
+  "modal-layout#lp": {
+    "children": [
+      "video#lp"
+    ]
+  },
+  "video#lp": {
+    "props": {
+      "width": "100%",
+      "height": "600px",
+      "loop": false,
+      "autoPlay": true,
+      "muted": false,
+      "src": "https://www.youtube.com/watch?v=vVNF4OASRDI&t=13s",
+      "blockClass": "videoEl"
+    }
+  }
+}

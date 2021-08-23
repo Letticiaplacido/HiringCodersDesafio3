@@ -1,0 +1,38 @@
+.element {
+    background-color: #424242;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: space-around;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-width: 500px;
+    max-height: 500px;
+    margin-top: 35px;
+    border-radius: 5px
+    
+}
+
+.productBrand {
+    color: #ffffff;
+    font-size: 1.30rem;
+    font-family: Montserrat;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.sellingPrice {
+    color: #59ff00;
+}
+
+.productImageTag {
+    max-width: 400px;
+    max-height: 4000px;
+}
+
+.galleryItem {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 40px;
+}
