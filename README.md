@@ -4,7 +4,7 @@ https://github.com/vtex-apps/minimum-boilerplate-theme
 
 Esse template foi utilizado para que fosse realizado a criação de um ecommmerce para o cliente UPMedal.com, a partir de um briefing.
 
-O desenvilvimento foi realizado com VTEX-IO.
+O desenvolvimento foi realizado com VTEX-IO.
 
 Para a criação do layout fui utilizado os seguintes componentes:
 
